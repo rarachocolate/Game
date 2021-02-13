@@ -3,8 +3,8 @@ months = ["睦月", "如月", "弥生", "卯月", "皐月", "水無月", "文月
 months.each.with_index(1) do |month, index|
   while true do 
     puts "#{index}月の旧暦は？"
-    # chomp!で改行を削除しないと正しい文字列を入力しても等しくないものとされるので改行を消す必要がある。
-    month1 = gets.to_s.chomp!
+    # chompで改行を削除しないと正しい文字列を入力しても改行が含まれて等しくないものとされるので改行を消す必要がある。
+    month1 = gets.to_s.chomp
     if month1 == month then
       puts "正解！次へ行こう"
       break
